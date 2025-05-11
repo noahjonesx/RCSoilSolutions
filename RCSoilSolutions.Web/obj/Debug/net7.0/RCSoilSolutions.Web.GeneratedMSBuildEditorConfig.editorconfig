@@ -1,0 +1,61 @@
+is_global = true
+build_property.EnableAotAnalyzer = 
+build_property.EnableSingleFileAnalyzer = 
+build_property.EnableTrimAnalyzer = false
+build_property.IncludeAllContentForSelfExtract = 
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = browser
+build_property.RootNamespace = RCSoilSolutions.Web
+build_property.RootNamespace = RCSoilSolutions.Web
+build_property.ProjectDir = C:\Users\noahx\Downloads\MyCode\RCSoilSolutions\RCSoilSolutions\RCSoilSolutions.Web\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\noahx\Downloads\MyCode\RCSoilSolutions\RCSoilSolutions\RCSoilSolutions.Web
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 7.0
+build_property.EnableCodeStyleSeverity = 
+
+[C:/Users/noahx/Downloads/MyCode/RCSoilSolutions/RCSoilSolutions/RCSoilSolutions.Web/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/noahx/Downloads/MyCode/RCSoilSolutions/RCSoilSolutions/RCSoilSolutions.Web/Pages/About.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWJvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/noahx/Downloads/MyCode/RCSoilSolutions/RCSoilSolutions/RCSoilSolutions.Web/Pages/Contact.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29udGFjdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/noahx/Downloads/MyCode/RCSoilSolutions/RCSoilSolutions/RCSoilSolutions.Web/Pages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/noahx/Downloads/MyCode/RCSoilSolutions/RCSoilSolutions/RCSoilSolutions.Web/Pages/Projects.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvamVjdHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/noahx/Downloads/MyCode/RCSoilSolutions/RCSoilSolutions/RCSoilSolutions.Web/Pages/Services.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2VydmljZXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/noahx/Downloads/MyCode/RCSoilSolutions/RCSoilSolutions/RCSoilSolutions.Web/Pages/Testimonials.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGVzdGltb25pYWxzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/noahx/Downloads/MyCode/RCSoilSolutions/RCSoilSolutions/RCSoilSolutions.Web/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/noahx/Downloads/MyCode/RCSoilSolutions/RCSoilSolutions/RCSoilSolutions.Web/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 

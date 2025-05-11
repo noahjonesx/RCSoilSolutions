@@ -1,0 +1,294 @@
+@page "/"
+@inject IJSRuntime JSRuntime
+
+<PageTitle>RC Soil Solutions - Expert Soil Management Services</PageTitle>
+
+<!-- Hero Section -->
+<section class="hero">
+    <img src="images/hero-bg.jpg" alt="Healthy Soil" class="hero-bg" />
+    <div class="container">
+        <div class="hero-content">
+            <h1 class="hero-title">Cultivating Excellence in Every Soil</h1>
+            <p class="hero-subtitle">Professional soil management solutions for agricultural, residential, and commercial properties</p>
+            <div class="d-flex gap-3">
+                <a href="services" class="btn btn-primary btn-lg">Our Services</a>
+                <a href="contact" class="btn btn-outline btn-lg">Contact Us</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="section bg-white">
+    <div class="container">
+        <div class="section-title">
+            <h2>Why Choose Us</h2>
+        </div>
+        <p class="section-subtitle">RC Soil Solutions brings expertise, innovation, and sustainability to every project</p>
+        
+        <div class="row mt-5">
+            <div class="col-md-4 mb-4">
+                <div class="feature-box" data-aos="fade-up">
+                    <div class="feature-icon">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h4 class="feature-title">Advanced Testing</h4>
+                    <p>We use state-of-the-art technology to analyze soil composition, nutrients, and health for accurate results.</p>
+                </div>
+            </div>
+            
+            <div class="col-md-4 mb-4">
+                <div class="feature-box" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h4 class="feature-title">Eco-Friendly Solutions</h4>
+                    <p>Our soil treatments and management practices prioritize environmental sustainability and long-term land health.</p>
+                </div>
+            </div>
+            
+            <div class="col-md-4 mb-4">
+                <div class="feature-box" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h4 class="feature-title">Expert Team</h4>
+                    <p>Our certified soil scientists and agronomists bring decades of experience to every project we undertake.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section class="section bg-light">
+    <div class="container">
+        <div class="section-title">
+            <h2>Our Services</h2>
+        </div>
+        <p class="section-subtitle">Comprehensive soil solutions tailored to your specific needs</p>
+        
+        <div class="row mt-5">
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100 card-hover-zoom" data-aos="fade-up">
+                    <img src="images/service-1.jpg" alt="Soil Testing" class="card-img">
+                    <div class="card-body">
+                        <h4 class="card-title">Soil Testing & Analysis</h4>
+                        <p class="card-text">Comprehensive soil testing to determine composition, nutrient levels, pH balance, and potential contaminants.</p>
+                        <a href="services#soil-testing" class="btn btn-outline">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100 card-hover-zoom" data-aos="fade-up" data-aos-delay="100">
+                    <img src="images/service-2.jpg" alt="Soil Remediation" class="card-img">
+                    <div class="card-body">
+                        <h4 class="card-title">Soil Remediation</h4>
+                        <p class="card-text">Specialized treatments to restore contaminated or depleted soils to optimal health and productivity.</p>
+                        <a href="services#soil-remediation" class="btn btn-outline">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100 card-hover-zoom" data-aos="fade-up" data-aos-delay="200">
+                    <img src="images/service-3.jpg" alt="Land Management" class="card-img">
+                    <div class="card-body">
+                        <h4 class="card-title">Land Management</h4>
+                        <p class="card-text">Sustainable land use planning and management strategies to maximize soil health and productivity.</p>
+                        <a href="services#land-management" class="btn btn-outline">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100 card-hover-zoom" data-aos="fade-up" data-aos-delay="300">
+                    <img src="images/service-4.jpg" alt="Erosion Control" class="card-img">
+                    <div class="card-body">
+                        <h4 class="card-title">Erosion Control</h4>
+                        <p class="card-text">Effective solutions to prevent soil erosion and preserve valuable topsoil for long-term land stability.</p>
+                        <a href="services#erosion-control" class="btn btn-outline">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100 card-hover-zoom" data-aos="fade-up" data-aos-delay="400">
+                    <img src="images/service-5.jpg" alt="Consulting Services" class="card-img">
+                    <div class="card-body">
+                        <h4 class="card-title">Consulting Services</h4>
+                        <p class="card-text">Expert advice and recommendations for soil improvement, crop selection, and sustainable land use.</p>
+                        <a href="services#consulting" class="btn btn-outline">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100 card-hover-zoom" data-aos="fade-up" data-aos-delay="500">
+                    <img src="images/service-6.jpg" alt="Custom Soil Mixes" class="card-img">
+                    <div class="card-body">
+                        <h4 class="card-title">Custom Soil Mixes</h4>
+                        <p class="card-text">Specially formulated soil blends tailored to specific crop types, landscapes, or growing conditions.</p>
+                        <a href="services#custom-mixes" class="btn btn-outline">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-5" data-aos="fade-up">
+            <a href="services" class="btn btn-primary btn-lg">View All Services</a>
+        </div>
+    </div>
+</section>
+
+<!-- Stats Section -->
+<section class="section bg-primary text-white">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-6 mb-4 mb-md-0">
+                <div class="text-center" data-aos="fade-up">
+                    <h2 class="mb-2"><span id="stat1" class="counter">0</span>+</h2>
+                    <p class="mb-0">Projects Completed</p>
+                </div>
+            </div>
+            
+            <div class="col-md-3 col-6 mb-4 mb-md-0">
+                <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+                    <h2 class="mb-2"><span id="stat2" class="counter">0</span>+</h2>
+                    <p class="mb-0">Satisfied Clients</p>
+                </div>
+            </div>
+            
+            <div class="col-md-3 col-6">
+                <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+                    <h2 class="mb-2"><span id="stat3" class="counter">0</span>+</h2>
+                    <p class="mb-0">Acres Improved</p>
+                </div>
+            </div>
+            
+            <div class="col-md-3 col-6">
+                <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+                    <h2 class="mb-2"><span id="stat4" class="counter">0</span>+</h2>
+                    <p class="mb-0">Years Experience</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="section bg-white">
+    <div class="container">
+        <div class="section-title">
+            <h2>What Our Clients Say</h2>
+        </div>
+        <p class="section-subtitle">Hear from satisfied customers who have experienced the RC Soil Solutions difference</p>
+        
+        <div class="row mt-5">
+            <div class="col-md-6 mb-4">
+                <div class="testimonial" data-aos="fade-up">
+                    <p class="testimonial-text">
+                        RC Soil Solutions completely transformed our farm's productivity. Their soil testing identified nutrient deficiencies we didn't know existed, and their customized treatment plan increased our crop yield by over 30% in just one season.
+                    </p>
+                    <div class="testimonial-author">
+                        <img src="images/testimonial-1.jpg" alt="John Farmer" class="testimonial-author-img">
+                        <div>
+                            <h5 class="testimonial-author-name">John Farmer</h5>
+                            <p class="testimonial-author-title">Sunrise Farms</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 mb-4">
+                <div class="testimonial" data-aos="fade-up" data-aos-delay="100">
+                    <p class="testimonial-text">
+                        After struggling with erosion issues on our property for years, RC Soil Solutions provided an effective and eco-friendly solution that stabilized our land while enhancing its natural beauty. Their expertise is unmatched.
+                    </p>
+                    <div class="testimonial-author">
+                        <img src="images/testimonial-2.jpg" alt="Sarah Johnson" class="testimonial-author-img">
+                        <div>
+                            <h5 class="testimonial-author-name">Sarah Johnson</h5>
+                            <p class="testimonial-author-title">Homeowner</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 mb-4">
+                <div class="testimonial" data-aos="fade-up" data-aos-delay="200">
+                    <p class="testimonial-text">
+                        Their consulting services were invaluable for our community garden project. RC Soil Solutions helped us transform a barren lot into a thriving garden space with custom soil mixes perfectly suited to our variety of plants.
+                    </p>
+                    <div class="testimonial-author">
+                        <img src="images/testimonial-3.jpg" alt="Michael Wong" class="testimonial-author-img">
+                        <div>
+                            <h5 class="testimonial-author-name">Michael Wong</h5>
+                            <p class="testimonial-author-title">Green Community Initiative</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 mb-4">
+                <div class="testimonial" data-aos="fade-up" data-aos-delay="300">
+                    <p class="testimonial-text">
+                        As a landscape architect, I've worked with many soil companies, but RC Soil Solutions stands out for their technical knowledge, reliability, and custom solutions that perfectly match each project's unique requirements.
+                    </p>
+                    <div class="testimonial-author">
+                        <img src="images/testimonial-4.jpg" alt="Emma Rodriguez" class="testimonial-author-img">
+                        <div>
+                            <h5 class="testimonial-author-name">Emma Rodriguez</h5>
+                            <p class="testimonial-author-title">Landscape Architect</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-4" data-aos="fade-up">
+            <a href="testimonials" class="btn btn-primary">Read More Testimonials</a>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta">
+    <div class="container">
+        <h2 class="cta-title" data-aos="fade-up">Ready to Transform Your Soil?</h2>
+        <p class="cta-text" data-aos="fade-up" data-aos-delay="100">
+            Contact us today for a free consultation and soil assessment. Our experts are ready to help you achieve optimal soil health and productivity.
+        </p>
+        <div class="cta-buttons" data-aos="fade-up" data-aos-delay="200">
+            <a href="contact" class="btn btn-accent btn-lg">Get Started</a>
+            <a href="tel:+11234567890" class="btn btn-outline btn-lg">Call (123) 456-7890</a>
+        </div>
+    </div>
+</section>
+
+@code {
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            // Initialize AOS animations
+            await JSRuntime.InvokeVoidAsync("AOS.init");
+            
+            // Animate counters
+            await AnimateCounters();
+        }
+    }
+    
+    private async Task AnimateCounters()
+    {
+        // Wait for the stats section to come into view
+        await Task.Delay(1000);
+        
+        // Get counter elements and animate them
+        await JSRuntime.InvokeVoidAsync("animateCounter", "#stat1", 0, 500, 2000);
+        await JSRuntime.InvokeVoidAsync("animateCounter", "#stat2", 0, 350, 2000);
+        await JSRuntime.InvokeVoidAsync("animateCounter", "#stat3", 0, 10000, 2000);
+        await JSRuntime.InvokeVoidAsync("animateCounter", "#stat4", 0, 15, 2000);
+    }
+} 

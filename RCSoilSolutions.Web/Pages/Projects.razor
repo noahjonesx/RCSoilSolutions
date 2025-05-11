@@ -1,0 +1,89 @@
+@page "/projects"
+@inject IJSRuntime JSRuntime
+
+<PageTitle>Our Projects - RC Soil Solutions</PageTitle>
+
+<!-- Page Header -->
+<section class="page-header bg-primary text-white">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6" data-aos="fade-right">
+                <h1>Our Projects</h1>
+                <p class="lead">Explore our successful soil management projects</p>
+            </div>
+            <div class="col-md-6 text-md-end" data-aos="fade-left">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb justify-content-md-end">
+                        <li class="breadcrumb-item"><a href="" class="text-white">Home</a></li>
+                        <li class="breadcrumb-item active text-white" aria-current="page">Projects</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Projects Section -->
+<section class="section bg-white">
+    <div class="container">
+        <div class="section-title">
+            <h2>Featured Projects</h2>
+        </div>
+        <p class="section-subtitle">Explore some of our most impactful soil management and remediation projects</p>
+        
+        <div class="row mt-5">
+            <!-- This is a placeholder. In the final implementation, this would contain actual project details -->
+            <div class="col-md-6 mb-4" data-aos="fade-up">
+                <div class="project-card">
+                    <img src="images/placeholder.jpg" alt="Project 1" class="project-img">
+                    <div class="project-overlay">
+                        <span class="project-category">Soil Remediation</span>
+                        <h3 class="project-title">Farmland Recovery Project</h3>
+                        <p>This is a placeholder for project details. In the final implementation, this would contain an actual description of the project.</p>
+                        <a href="#" class="btn btn-sm btn-outline-light mt-2">View Details</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="project-card">
+                    <img src="images/placeholder.jpg" alt="Project 2" class="project-img">
+                    <div class="project-overlay">
+                        <span class="project-category">Erosion Control</span>
+                        <h3 class="project-title">Hillside Stabilization</h3>
+                        <p>This is a placeholder for project details. In the final implementation, this would contain an actual description of the project.</p>
+                        <a href="#" class="btn btn-sm btn-outline-light mt-2">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-4">
+            <p>This is a placeholder page. In the full implementation, this page would showcase RC Soil Solutions' portfolio of completed projects with detailed case studies.</p>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta">
+    <div class="container">
+        <h2 class="cta-title" data-aos="fade-up">Ready to Start Your Project?</h2>
+        <p class="cta-text" data-aos="fade-up" data-aos-delay="100">
+            Contact us today to discuss your soil management needs and discover how RC Soil Solutions can help you achieve optimal soil health and productivity.
+        </p>
+        <div class="cta-buttons" data-aos="fade-up" data-aos-delay="200">
+            <a href="contact" class="btn btn-accent btn-lg">Get Started Now</a>
+            <a href="tel:+11234567890" class="btn btn-outline btn-lg">Call (123) 456-7890</a>
+        </div>
+    </div>
+</section>
+
+@code {
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await JSRuntime.InvokeVoidAsync("AOS.init");
+        }
+    }
+} 

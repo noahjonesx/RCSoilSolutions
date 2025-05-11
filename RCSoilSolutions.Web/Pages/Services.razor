@@ -1,0 +1,574 @@
+@page "/services"
+@inject IJSRuntime JSRuntime
+
+<PageTitle>Our Services - RC Soil Solutions</PageTitle>
+
+<!-- Page Header -->
+<section class="page-header bg-primary text-white">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6" data-aos="fade-right">
+                <h1>Our Services</h1>
+                <p class="lead">Comprehensive soil solutions tailored to your specific needs</p>
+            </div>
+            <div class="col-md-6 text-md-end" data-aos="fade-left">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb justify-content-md-end">
+                        <li class="breadcrumb-item"><a href="" class="text-white">Home</a></li>
+                        <li class="breadcrumb-item active text-white" aria-current="page">Services</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Overview Section -->
+<section class="section bg-white">
+    <div class="container">
+        <div class="section-title">
+            <h2>Our Service Offerings</h2>
+        </div>
+        <p class="section-subtitle">At RC Soil Solutions, we offer a comprehensive range of soil management services designed to enhance soil health, productivity, and sustainability.</p>
+        
+        <div class="row mt-5">
+            <!-- Soil Testing & Analysis -->
+            <div class="col-md-6 mb-5" id="soil-testing" data-aos="fade-up">
+                <div class="service-item">
+                    <img src="images/service-1.jpg" alt="Soil Testing & Analysis" class="service-detail-img">
+                    <h3 class="text-primary">Soil Testing & Analysis</h3>
+                    <p>Our comprehensive soil testing services provide detailed analysis of your soil's composition, nutrient content, pH levels, and potential contaminants. Understanding your soil is the first step toward optimizing its health and productivity.</p>
+                    
+                    <div class="service-benefits">
+                        <h4>Benefits:</h4>
+                        <div class="service-benefit-item">
+                            <div class="service-benefit-icon">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div>
+                                <h5>Accurate Assessment</h5>
+                                <p>Detailed analysis provides a clear picture of your soil's current condition and needs.</p>
+                            </div>
+                        </div>
+                        <div class="service-benefit-item">
+                            <div class="service-benefit-icon">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div>
+                                <h5>Targeted Recommendations</h5>
+                                <p>Based on test results, we provide specific recommendations for soil improvement.</p>
+                            </div>
+                        </div>
+                        <div class="service-benefit-item">
+                            <div class="service-benefit-icon">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div>
+                                <h5>Cost-Effective Solutions</h5>
+                                <p>Avoid wasting resources on unnecessary treatments by focusing on your soil's specific needs.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4">
+                        <a href="contact" class="btn btn-primary">Request Soil Testing</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Soil Remediation -->
+            <div class="col-md-6 mb-5" id="soil-remediation" data-aos="fade-up" data-aos-delay="100">
+                <div class="service-item">
+                    <img src="images/service-2.jpg" alt="Soil Remediation" class="service-detail-img">
+                    <h3 class="text-primary">Soil Remediation</h3>
+                    <p>Our soil remediation services address contamination, pollution, and degradation issues through specialized treatment methods. We restore soil health and functionality while minimizing environmental impact and health risks.</p>
+                    
+                    <div class="service-benefits">
+                        <h4>Benefits:</h4>
+                        <div class="service-benefit-item">
+                            <div class="service-benefit-icon">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div>
+                                <h5>Contamination Removal</h5>
+                                <p>Effective removal or neutralization of harmful contaminants from your soil.</p>
+                            </div>
+                        </div>
+                        <div class="service-benefit-item">
+                            <div class="service-benefit-icon">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div>
+                                <h5>Restored Productivity</h5>
+                                <p>Return previously unusable or underperforming land to productive use.</p>
+                            </div>
+                        </div>
+                        <div class="service-benefit-item">
+                            <div class="service-benefit-icon">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div>
+                                <h5>Regulatory Compliance</h5>
+                                <p>Ensure your property meets environmental regulations and standards.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4">
+                        <a href="contact" class="btn btn-primary">Schedule Consultation</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Land Management -->
+            <div class="col-md-6 mb-5" id="land-management" data-aos="fade-up">
+                <div class="service-item">
+                    <img src="images/service-3.jpg" alt="Land Management" class="service-detail-img">
+                    <h3 class="text-primary">Land Management</h3>
+                    <p>Our comprehensive land management services help landowners implement sustainable practices that maintain soil health while maximizing productivity. We develop customized plans that balance immediate needs with long-term land preservation.</p>
+                    
+                    <div class="service-benefits">
+                        <h4>Benefits:</h4>
+                        <div class="service-benefit-item">
+                            <div class="service-benefit-icon">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div>
+                                <h5>Sustainable Practices</h5>
+                                <p>Implementation of methods that preserve soil health for generations to come.</p>
+                            </div>
+                        </div>
+                        <div class="service-benefit-item">
+                            <div class="service-benefit-icon">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div>
+                                <h5>Optimized Land Use</h5>
+                                <p>Strategic planning to make the most of your land's natural features and potential.</p>
+                            </div>
+                        </div>
+                        <div class="service-benefit-item">
+                            <div class="service-benefit-icon">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div>
+                                <h5>Increased Property Value</h5>
+                                <p>Well-managed land generally maintains or increases in value over time.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4">
+                        <a href="contact" class="btn btn-primary">Discuss Your Land</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Erosion Control -->
+            <div class="col-md-6 mb-5" id="erosion-control" data-aos="fade-up" data-aos-delay="100">
+                <div class="service-item">
+                    <img src="images/service-4.jpg" alt="Erosion Control" class="service-detail-img">
+                    <h3 class="text-primary">Erosion Control</h3>
+                    <p>Our erosion control services help prevent soil loss through wind and water erosion, protecting your valuable topsoil and maintaining land stability. We design and implement custom solutions based on your specific terrain and conditions.</p>
+                    
+                    <div class="service-benefits">
+                        <h4>Benefits:</h4>
+                        <div class="service-benefit-item">
+                            <div class="service-benefit-icon">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div>
+                                <h5>Topsoil Preservation</h5>
+                                <p>Protect your most valuable soil layer from being washed or blown away.</p>
+                            </div>
+                        </div>
+                        <div class="service-benefit-item">
+                            <div class="service-benefit-icon">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div>
+                                <h5>Reduced Runoff</h5>
+                                <p>Minimize water runoff and its associated problems like flooding and water pollution.</p>
+                            </div>
+                        </div>
+                        <div class="service-benefit-item">
+                            <div class="service-benefit-icon">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div>
+                                <h5>Enhanced Aesthetics</h5>
+                                <p>Maintain the visual appeal of your property by preventing erosion damage.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4">
+                        <a href="contact" class="btn btn-primary">Get Erosion Solutions</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Consulting Services -->
+            <div class="col-md-6 mb-5" id="consulting" data-aos="fade-up">
+                <div class="service-item">
+                    <img src="images/service-5.jpg" alt="Consulting Services" class="service-detail-img">
+                    <h3 class="text-primary">Consulting Services</h3>
+                    <p>Our expert consultants provide professional advice on soil management, crop selection, and sustainable land use. Whether you're planning a new project or addressing existing issues, our team offers knowledge-based guidance to help you succeed.</p>
+                    
+                    <div class="service-benefits">
+                        <h4>Benefits:</h4>
+                        <div class="service-benefit-item">
+                            <div class="service-benefit-icon">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div>
+                                <h5>Expert Guidance</h5>
+                                <p>Access to specialized knowledge and experience from certified soil scientists.</p>
+                            </div>
+                        </div>
+                        <div class="service-benefit-item">
+                            <div class="service-benefit-icon">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div>
+                                <h5>Informed Decision-Making</h5>
+                                <p>Make better choices with professional insights and data-driven recommendations.</p>
+                            </div>
+                        </div>
+                        <div class="service-benefit-item">
+                            <div class="service-benefit-icon">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div>
+                                <h5>Problem Prevention</h5>
+                                <p>Identify and address potential issues before they become costly problems.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4">
+                        <a href="contact" class="btn btn-primary">Request Consultation</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Custom Soil Mixes -->
+            <div class="col-md-6 mb-5" id="custom-mixes" data-aos="fade-up" data-aos-delay="100">
+                <div class="service-item">
+                    <img src="images/service-6.jpg" alt="Custom Soil Mixes" class="service-detail-img">
+                    <h3 class="text-primary">Custom Soil Mixes</h3>
+                    <p>We create specialized soil blends tailored to specific crop types, landscapes, or growing conditions. Our custom mixes provide the optimal balance of nutrients, drainage, and structure for your particular needs and goals.</p>
+                    
+                    <div class="service-benefits">
+                        <h4>Benefits:</h4>
+                        <div class="service-benefit-item">
+                            <div class="service-benefit-icon">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div>
+                                <h5>Optimized Growth</h5>
+                                <p>Soil specifically formulated to provide ideal conditions for your plants or crops.</p>
+                            </div>
+                        </div>
+                        <div class="service-benefit-item">
+                            <div class="service-benefit-icon">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div>
+                                <h5>Resource Efficiency</h5>
+                                <p>Reduce water and fertilizer usage with soil designed for your specific conditions.</p>
+                            </div>
+                        </div>
+                        <div class="service-benefit-item">
+                            <div class="service-benefit-icon">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div>
+                                <h5>Consistent Results</h5>
+                                <p>Achieve reliable outcomes with custom soil engineered to your specifications.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4">
+                        <a href="contact" class="btn btn-primary">Order Custom Mix</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Process Section -->
+<section class="section bg-light">
+    <div class="container">
+        <div class="section-title">
+            <h2>Our Process</h2>
+        </div>
+        <p class="section-subtitle">How we approach soil management to deliver optimal results</p>
+        
+        <div class="row mt-5">
+            <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up">
+                <div class="process-step text-center">
+                    <div class="process-number">1</div>
+                    <h4 class="mt-4 mb-3">Assessment</h4>
+                    <p>We begin with a thorough analysis of your soil and site conditions to understand the current state and challenges.</p>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="process-step text-center">
+                    <div class="process-number">2</div>
+                    <h4 class="mt-4 mb-3">Planning</h4>
+                    <p>Based on the assessment, we develop a customized plan that addresses your specific goals and soil improvement needs.</p>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="process-step text-center">
+                    <div class="process-number">3</div>
+                    <h4 class="mt-4 mb-3">Implementation</h4>
+                    <p>Our experienced team executes the plan with precision, using proven methods and high-quality materials.</p>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="process-step text-center">
+                    <div class="process-number">4</div>
+                    <h4 class="mt-4 mb-3">Monitoring</h4>
+                    <p>We provide ongoing monitoring and support to ensure the long-term success of our soil improvement solutions.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Client Types Section -->
+<section class="section bg-white">
+    <div class="container">
+        <div class="section-title">
+            <h2>Who We Serve</h2>
+        </div>
+        <p class="section-subtitle">Our services are tailored to meet the needs of diverse clients across various sectors</p>
+        
+        <div class="row mt-5">
+            <div class="col-md-4 mb-4" data-aos="fade-up">
+                <div class="card h-100 border-0 shadow">
+                    <div class="card-body p-4">
+                        <div class="mb-3">
+                            <i class="fas fa-tractor fa-3x text-primary"></i>
+                        </div>
+                        <h4>Agricultural</h4>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check-circle text-success me-2"></i> Farmers & Ranchers</li>
+                            <li><i class="fas fa-check-circle text-success me-2"></i> Vineyard & Orchard Owners</li>
+                            <li><i class="fas fa-check-circle text-success me-2"></i> Agricultural Cooperatives</li>
+                            <li><i class="fas fa-check-circle text-success me-2"></i> Organic Producers</li>
+                        </ul>
+                        <p>We help agricultural professionals maximize crop yields, improve soil health, and implement sustainable farming practices.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="card h-100 border-0 shadow">
+                    <div class="card-body p-4">
+                        <div class="mb-3">
+                            <i class="fas fa-home fa-3x text-primary"></i>
+                        </div>
+                        <h4>Residential</h4>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check-circle text-success me-2"></i> Homeowners</li>
+                            <li><i class="fas fa-check-circle text-success me-2"></i> Garden Enthusiasts</li>
+                            <li><i class="fas fa-check-circle text-success me-2"></i> HOAs & Communities</li>
+                            <li><i class="fas fa-check-circle text-success me-2"></i> Property Developers</li>
+                        </ul>
+                        <p>We provide solutions for beautiful, healthy lawns and gardens, erosion control, and effective drainage for residential properties.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="card h-100 border-0 shadow">
+                    <div class="card-body p-4">
+                        <div class="mb-3">
+                            <i class="fas fa-building fa-3x text-primary"></i>
+                        </div>
+                        <h4>Commercial</h4>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check-circle text-success me-2"></i> Landscaping Companies</li>
+                            <li><i class="fas fa-check-circle text-success me-2"></i> Construction Firms</li>
+                            <li><i class="fas fa-check-circle text-success me-2"></i> Golf Courses</li>
+                            <li><i class="fas fa-check-circle text-success me-2"></i> Municipal Parks & Facilities</li>
+                        </ul>
+                        <p>We support commercial clients with soil remediation, erosion control, and custom soil solutions for large-scale projects.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Pricing Section -->
+<section class="section bg-light">
+    <div class="container">
+        <div class="section-title">
+            <h2>Service Pricing</h2>
+        </div>
+        <p class="section-subtitle">Transparent pricing for our most common services</p>
+        
+        <div class="row mt-5">
+            <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
+                <div class="card h-100 border-0 shadow pricing-card">
+                    <div class="card-header bg-primary text-white text-center py-4">
+                        <h3 class="mb-0">Basic Soil Testing</h3>
+                    </div>
+                    <div class="card-body p-4 text-center">
+                        <div class="pricing-amount">
+                            <span class="currency">$</span>
+                            <span class="amount">99</span>
+                            <span class="period">per sample</span>
+                        </div>
+                        <ul class="list-unstyled pricing-features mt-4">
+                            <li><i class="fas fa-check text-success me-2"></i> Standard Nutrient Analysis</li>
+                            <li><i class="fas fa-check text-success me-2"></i> pH Level Testing</li>
+                            <li><i class="fas fa-check text-success me-2"></i> Organic Matter Content</li>
+                            <li><i class="fas fa-check text-success me-2"></i> Basic Recommendations</li>
+                            <li><i class="fas fa-check text-success me-2"></i> 5-7 Business Day Turnaround</li>
+                        </ul>
+                        <div class="mt-4">
+                            <a href="contact" class="btn btn-primary w-100">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="card h-100 border-0 shadow pricing-card">
+                    <div class="card-header bg-primary text-white text-center py-4">
+                        <h3 class="mb-0">Comprehensive Analysis</h3>
+                    </div>
+                    <div class="card-body p-4 text-center">
+                        <div class="pricing-amount">
+                            <span class="currency">$</span>
+                            <span class="amount">249</span>
+                            <span class="period">per sample</span>
+                        </div>
+                        <ul class="list-unstyled pricing-features mt-4">
+                            <li><i class="fas fa-check text-success me-2"></i> All Basic Testing Features</li>
+                            <li><i class="fas fa-check text-success me-2"></i> Micronutrient Analysis</li>
+                            <li><i class="fas fa-check text-success me-2"></i> Soil Structure Assessment</li>
+                            <li><i class="fas fa-check text-success me-2"></i> Contamination Screening</li>
+                            <li><i class="fas fa-check text-success me-2"></i> Detailed Recommendations</li>
+                            <li><i class="fas fa-check text-success me-2"></i> 7-10 Business Day Turnaround</li>
+                        </ul>
+                        <div class="mt-4">
+                            <a href="contact" class="btn btn-primary w-100">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-12 mb-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="card h-100 border-0 shadow pricing-card">
+                    <div class="card-header bg-primary text-white text-center py-4">
+                        <h3 class="mb-0">Custom Consultation</h3>
+                    </div>
+                    <div class="card-body p-4 text-center">
+                        <div class="pricing-amount">
+                            <span class="amount">Custom</span>
+                            <span class="period">Quote</span>
+                        </div>
+                        <ul class="list-unstyled pricing-features mt-4">
+                            <li><i class="fas fa-check text-success me-2"></i> On-Site Assessment</li>
+                            <li><i class="fas fa-check text-success me-2"></i> Tailored Testing Plan</li>
+                            <li><i class="fas fa-check text-success me-2"></i> Comprehensive Analysis</li>
+                            <li><i class="fas fa-check text-success me-2"></i> Custom Treatment Plan</li>
+                            <li><i class="fas fa-check text-success me-2"></i> Implementation Support</li>
+                            <li><i class="fas fa-check text-success me-2"></i> Follow-Up Monitoring</li>
+                        </ul>
+                        <div class="mt-4">
+                            <a href="contact" class="btn btn-primary w-100">Request Quote</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-4" data-aos="fade-up">
+            <p><strong>Note:</strong> Pricing may vary based on specific requirements, project scope, and location. Contact us for a personalized quote.</p>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta">
+    <div class="container">
+        <h2 class="cta-title" data-aos="fade-up">Ready to Improve Your Soil?</h2>
+        <p class="cta-text" data-aos="fade-up" data-aos-delay="100">
+            Contact us today to discuss your soil management needs and discover how RC Soil Solutions can help you achieve optimal soil health and productivity.
+        </p>
+        <div class="cta-buttons" data-aos="fade-up" data-aos-delay="200">
+            <a href="contact" class="btn btn-accent btn-lg">Get Started Now</a>
+            <a href="tel:+11234567890" class="btn btn-outline btn-lg">Call (123) 456-7890</a>
+        </div>
+    </div>
+</section>
+
+<style>
+    .process-number {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 80px;
+        height: 80px;
+        background-color: var(--primary);
+        color: var(--neutral-100);
+        font-size: 2rem;
+        font-weight: 700;
+        border-radius: var(--radius-circle);
+        margin: 0 auto;
+    }
+    
+    .pricing-amount {
+        margin: 20px 0;
+    }
+    
+    .pricing-amount .currency {
+        font-size: 1.5rem;
+        font-weight: 600;
+        vertical-align: top;
+        margin-right: 5px;
+    }
+    
+    .pricing-amount .amount {
+        font-size: 3rem;
+        font-weight: 700;
+        color: var(--primary);
+    }
+    
+    .pricing-amount .period {
+        font-size: 1rem;
+        color: var(--neutral-600);
+        margin-left: 5px;
+    }
+    
+    .pricing-features li {
+        padding: 8px 0;
+        border-bottom: 1px solid var(--neutral-300);
+    }
+    
+    .pricing-features li:last-child {
+        border-bottom: none;
+    }
+</style>
+
+@code {
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await JSRuntime.InvokeVoidAsync("AOS.init");
+        }
+    }
+} 

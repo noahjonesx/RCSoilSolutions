@@ -1,0 +1,108 @@
+@page "/testimonials"
+@inject IJSRuntime JSRuntime
+
+<PageTitle>Testimonials - RC Soil Solutions</PageTitle>
+
+<!-- Page Header -->
+<section class="page-header bg-primary text-white">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6" data-aos="fade-right">
+                <h1>Testimonials</h1>
+                <p class="lead">What our clients say about our soil management services</p>
+            </div>
+            <div class="col-md-6 text-md-end" data-aos="fade-left">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb justify-content-md-end">
+                        <li class="breadcrumb-item"><a href="" class="text-white">Home</a></li>
+                        <li class="breadcrumb-item active text-white" aria-current="page">Testimonials</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Featured Testimonial Section -->
+<section class="section bg-white">
+    <div class="container">
+        <div class="section-title">
+            <h2>Client Success Stories</h2>
+        </div>
+        <p class="section-subtitle">Hear from our satisfied customers who have experienced the RC Soil Solutions difference</p>
+        
+        <div class="testimonial-featured" data-aos="fade-up">
+            <p class="testimonial-featured-text">
+                "RC Soil Solutions completely transformed our farm's productivity. Their soil testing identified nutrient deficiencies we didn't know existed, and their customized treatment plan increased our crop yield by over 30% in just one season. Their team's expertise and dedication to sustainable farming practices have made them an invaluable partner for our agricultural success."
+            </p>
+            <div class="testimonial-featured-author">
+                <img src="images/placeholder.jpg" alt="John Farmer" class="testimonial-featured-author-img">
+                <div>
+                    <h4 class="testimonial-featured-author-name">John Farmer</h4>
+                    <p class="testimonial-featured-author-title">Sunrise Farms</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row mt-5">
+            <!-- More testimonials would go here in the final implementation -->
+            <div class="col-lg-6 mb-4" data-aos="fade-up">
+                <div class="testimonial">
+                    <p class="testimonial-text">
+                        This is a placeholder testimonial. In the final implementation, this would contain an actual client testimonial about RC Soil Solutions' services.
+                    </p>
+                    <div class="testimonial-author">
+                        <img src="images/placeholder.jpg" alt="Client Name" class="testimonial-author-img">
+                        <div>
+                            <h5 class="testimonial-author-name">Client Name</h5>
+                            <p class="testimonial-author-title">Company or Role</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="testimonial">
+                    <p class="testimonial-text">
+                        This is a placeholder testimonial. In the final implementation, this would contain an actual client testimonial about RC Soil Solutions' services.
+                    </p>
+                    <div class="testimonial-author">
+                        <img src="images/placeholder.jpg" alt="Client Name" class="testimonial-author-img">
+                        <div>
+                            <h5 class="testimonial-author-name">Client Name</h5>
+                            <p class="testimonial-author-title">Company or Role</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-4">
+            <p>This is a placeholder page. In the full implementation, this page would showcase many more testimonials from satisfied RC Soil Solutions clients.</p>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta">
+    <div class="container">
+        <h2 class="cta-title" data-aos="fade-up">Join Our Satisfied Clients</h2>
+        <p class="cta-text" data-aos="fade-up" data-aos-delay="100">
+            Contact us today to experience the RC Soil Solutions difference for yourself.
+        </p>
+        <div class="cta-buttons" data-aos="fade-up" data-aos-delay="200">
+            <a href="contact" class="btn btn-accent btn-lg">Get Started Now</a>
+            <a href="tel:+11234567890" class="btn btn-outline btn-lg">Call (123) 456-7890</a>
+        </div>
+    </div>
+</section>
+
+@code {
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await JSRuntime.InvokeVoidAsync("AOS.init");
+        }
+    }
+} 

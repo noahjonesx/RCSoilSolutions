@@ -1,0 +1,319 @@
+/* 
+   RC Soil Solutions - Page Specific Styles
+   Styling for individual pages and common page elements
+*/
+
+/* Page Header */
+.page-header {
+    position: relative;
+    padding: 120px 0 70px;
+    background-color: var(--primary);
+    color: var(--neutral-100);
+    overflow: hidden;
+}
+
+.page-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(120deg, rgba(46, 125, 50, 0.8) 0%, rgba(0, 80, 5, 0.9) 100%);
+    z-index: 1;
+}
+
+.page-header .container {
+    position: relative;
+    z-index: 2;
+}
+
+.page-header h1 {
+    margin-bottom: 10px;
+    font-size: 2.75rem;
+    font-weight: 700;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.page-header .lead {
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin-bottom: 0;
+    opacity: 0.95;
+}
+
+.page-header .breadcrumb {
+    background: transparent;
+    padding: 0;
+    margin: 0;
+}
+
+.page-header .breadcrumb-item + .breadcrumb-item::before {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Team Cards */
+.team-card {
+    transition: var(--transition-normal);
+    overflow: hidden;
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+}
+
+.team-card .card-img-top {
+    height: 280px;
+    object-fit: cover;
+    transition: var(--transition-normal);
+}
+
+.team-card:hover .card-img-top {
+    transform: scale(1.05);
+}
+
+.team-social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background-color: var(--primary-light);
+    color: var(--neutral-100);
+    border-radius: var(--radius-circle);
+    transition: var(--transition-fast);
+}
+
+.team-social a:hover {
+    background-color: var(--primary);
+    transform: translateY(-3px);
+}
+
+/* Certification Logos */
+.certification-logo {
+    padding: var(--spacing-md);
+    height: 100%;
+    transition: var(--transition-normal);
+}
+
+.certification-logo:hover {
+    transform: scale(1.05);
+}
+
+.certification-logo img {
+    max-height: 100px;
+    margin-bottom: var(--spacing-sm);
+}
+
+.certification-logo p {
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+/* Contact Icons */
+.contact-icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    background-color: rgba(46, 125, 50, 0.1);
+    border-radius: var(--radius-circle);
+    transition: var(--transition-normal);
+}
+
+.card:hover .contact-icon {
+    background-color: rgba(46, 125, 50, 0.2);
+    transform: scale(1.1);
+}
+
+/* Map Container */
+.map-container {
+    overflow: hidden;
+    border: 1px solid var(--neutral-300);
+    transition: var(--transition-normal);
+}
+
+/* Services Detail */
+.service-detail-img {
+    height: 400px;
+    object-fit: cover;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-lg);
+    margin-bottom: var(--spacing-lg);
+}
+
+.service-benefits {
+    margin-top: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+}
+
+.service-benefit-item {
+    display: flex;
+    margin-bottom: var(--spacing-md);
+}
+
+.service-benefit-icon {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary-light);
+    color: var(--neutral-100);
+    border-radius: var(--radius-circle);
+    margin-right: var(--spacing-md);
+}
+
+/* Projects Gallery */
+.project-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius-md);
+    margin-bottom: var(--spacing-lg);
+}
+
+.project-img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: var(--transition-normal);
+}
+
+.project-card:hover .project-img {
+    transform: scale(1.1);
+}
+
+.project-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: var(--spacing-lg);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+    color: var(--neutral-100);
+    transition: var(--transition-normal);
+}
+
+.project-card:hover .project-overlay {
+    background: linear-gradient(0deg, rgba(46, 125, 50, 0.9) 0%, rgba(46, 125, 50, 0.7) 50%, rgba(0, 0, 0, 0) 100%);
+}
+
+.project-title {
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-sm);
+    color: var(--neutral-100);
+}
+
+.project-category {
+    display: inline-block;
+    padding: 4px 10px;
+    background-color: var(--primary);
+    color: var(--neutral-100);
+    font-size: 0.8rem;
+    border-radius: var(--radius-sm);
+    margin-bottom: var(--spacing-sm);
+}
+
+/* Testimonial Detail Page */
+.testimonial-featured {
+    position: relative;
+    padding: var(--spacing-xl);
+    background-color: var(--primary-light);
+    color: var(--neutral-100);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--spacing-xl);
+}
+
+.testimonial-featured::before {
+    content: '"';
+    position: absolute;
+    top: -10px;
+    left: 30px;
+    font-size: 120px;
+    font-family: Georgia, serif;
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.testimonial-featured-text {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    margin-bottom: var(--spacing-lg);
+}
+
+.testimonial-featured-author {
+    display: flex;
+    align-items: center;
+}
+
+.testimonial-featured-author-img {
+    width: 70px;
+    height: 70px;
+    border-radius: var(--radius-circle);
+    margin-right: var(--spacing-md);
+    border: 3px solid var(--neutral-100);
+}
+
+.testimonial-featured-author-name {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.testimonial-featured-author-title {
+    opacity: 0.9;
+    font-size: 0.9rem;
+}
+
+/* FAQ Accordion */
+.faq-accordion {
+    margin-bottom: var(--spacing-lg);
+}
+
+.faq-accordion .accordion-button {
+    font-weight: 600;
+    padding: var(--spacing-md) var(--spacing-lg);
+}
+
+.faq-accordion .accordion-button:not(.collapsed) {
+    background-color: var(--primary-light);
+    color: var(--neutral-100);
+}
+
+.faq-accordion .accordion-body {
+    padding: var(--spacing-lg);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .page-header {
+        padding: 100px 0 50px;
+    }
+    
+    .page-header h1 {
+        font-size: 2.25rem;
+    }
+    
+    .service-detail-img {
+        height: 300px;
+    }
+    
+    .testimonial-featured-text {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .page-header {
+        padding: 80px 0 40px;
+    }
+    
+    .page-header h1 {
+        font-size: 1.75rem;
+    }
+    
+    .service-detail-img {
+        height: 200px;
+    }
+} 

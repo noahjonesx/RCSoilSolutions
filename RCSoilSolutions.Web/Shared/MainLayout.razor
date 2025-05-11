@@ -1,0 +1,171 @@
+@inherits LayoutComponentBase
+@inject IJSRuntime JSRuntime
+
+<div class="page">
+    <div class="navbar">
+        <div class="container navbar-container">
+            <a href="" class="navbar-brand">
+                <span>RC Soil Solutions</span>
+            </a>
+            
+            <div class="navbar-menu">
+                <NavLink href="" Match="NavLinkMatch.All">Home</NavLink>
+                <NavLink href="about">About</NavLink>
+                <NavLink href="services">Services</NavLink>
+                <NavLink href="projects">Projects</NavLink>
+                <NavLink href="testimonials">Testimonials</NavLink>
+                <NavLink href="contact">Contact</NavLink>
+            </div>
+            
+            <button type="button" class="navbar-mobile-toggle" @onclick="ToggleMobileMenu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </div>
+    
+    <div class="mobile-menu @(_isMobileMenuOpen ? "show" : "")">
+        <button type="button" class="mobile-menu-close" @onclick="CloseMobileMenu">
+            <i class="fas fa-times"></i>
+        </button>
+        
+        <div class="mobile-menu-items">
+            <NavLink href="" @onclick="CloseMobileMenu" Match="NavLinkMatch.All">Home</NavLink>
+            <NavLink href="about" @onclick="CloseMobileMenu">About</NavLink>
+            <NavLink href="services" @onclick="CloseMobileMenu">Services</NavLink>
+            <NavLink href="projects" @onclick="CloseMobileMenu">Projects</NavLink>
+            <NavLink href="testimonials" @onclick="CloseMobileMenu">Testimonials</NavLink>
+            <NavLink href="contact" @onclick="CloseMobileMenu">Contact</NavLink>
+        </div>
+    </div>
+    
+    <main>
+        @Body
+    </main>
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-logo">
+                        <span class="footer-logo-text">RC Soil Solutions</span>
+                    </div>
+                    <p class="footer-about">
+                        Providing expert soil management, testing, and enhancement services to maximize the potential of your land and crops.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" target="_blank" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" target="_blank" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" target="_blank" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" target="_blank" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h5 class="footer-title">Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="">Home</a></li>
+                        <li><a href="about">About Us</a></li>
+                        <li><a href="services">Services</a></li>
+                        <li><a href="projects">Projects</a></li>
+                        <li><a href="testimonials">Testimonials</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h5 class="footer-title">Our Services</h5>
+                    <ul class="footer-links">
+                        <li><a href="services#soil-testing">Soil Testing</a></li>
+                        <li><a href="services#soil-remediation">Soil Remediation</a></li>
+                        <li><a href="services#land-management">Land Management</a></li>
+                        <li><a href="services#erosion-control">Erosion Control</a></li>
+                        <li><a href="services#consulting">Consulting Services</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h5 class="footer-title">Contact Us</h5>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-map-marker-alt footer-contact-icon"></i>
+                        <span>123 Soil Avenue, Earthtown, ET 12345</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-phone footer-contact-icon"></i>
+                        <span>(123) 456-7890</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-envelope footer-contact-icon"></i>
+                        <span>info@rcsoilsolutions.com</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-clock footer-contact-icon"></i>
+                        <span>Mon-Fri: 8:00 AM - 5:00 PM</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="footer-copyright">
+                    &copy; @DateTime.Now.Year RC Soil Solutions. All Rights Reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+    
+    <div class="back-to-top @(_showBackToTop ? "show" : "")" @onclick="ScrollToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+</div>
+
+@code {
+    private bool _isMobileMenuOpen = false;
+    private bool _showBackToTop = false;
+    private DotNetObjectReference<MainLayout>? _objRef;
+    
+    protected override void OnInitialized()
+    {
+        _objRef = DotNetObjectReference.Create(this);
+    }
+    
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await JSRuntime.InvokeVoidAsync("window.addEventListener", "scroll", new Action(CheckScroll));
+        }
+    }
+    
+    private void CheckScroll()
+    {
+        var scrollPosition = JSRuntime.InvokeAsync<int>("window.scrollY").Result;
+        _showBackToTop = scrollPosition > 300;
+        StateHasChanged();
+    }
+    
+    private void ToggleMobileMenu()
+    {
+        _isMobileMenuOpen = !_isMobileMenuOpen;
+    }
+    
+    private void CloseMobileMenu()
+    {
+        _isMobileMenuOpen = false;
+    }
+    
+    private async Task ScrollToTop()
+    {
+        await JSRuntime.InvokeVoidAsync("scrollToTop");
+    }
+    
+    public void Dispose()
+    {
+        _objRef?.Dispose();
+    }
+} 

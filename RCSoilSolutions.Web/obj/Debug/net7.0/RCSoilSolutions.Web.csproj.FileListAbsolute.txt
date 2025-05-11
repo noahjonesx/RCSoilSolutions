@@ -1,0 +1,7 @@
+C:\Users\noahx\Downloads\MyCode\RCSoilSolutions\RCSoilSolutions\RCSoilSolutions.Web\obj\Debug\net7.0\RCSoilSolutions.Web.csproj.AssemblyReference.cache
+C:\Users\noahx\Downloads\MyCode\RCSoilSolutions\RCSoilSolutions\RCSoilSolutions.Web\obj\Debug\net7.0\RCSoilSolutions.Web.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\noahx\Downloads\MyCode\RCSoilSolutions\RCSoilSolutions\RCSoilSolutions.Web\obj\Debug\net7.0\RCSoilSolutions.Web.AssemblyInfoInputs.cache
+C:\Users\noahx\Downloads\MyCode\RCSoilSolutions\RCSoilSolutions\RCSoilSolutions.Web\obj\Debug\net7.0\RCSoilSolutions.Web.AssemblyInfo.cs
+C:\Users\noahx\Downloads\MyCode\RCSoilSolutions\RCSoilSolutions\RCSoilSolutions.Web\obj\Debug\net7.0\RCSoilSolutions.Web.csproj.CoreCompileInputs.cache
+C:\Users\noahx\Downloads\MyCode\RCSoilSolutions\RCSoilSolutions\RCSoilSolutions.Web\obj\Debug\net7.0\RCSoilSolutions.Web.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\noahx\Downloads\MyCode\RCSoilSolutions\RCSoilSolutions\RCSoilSolutions.Web\obj\Debug\net7.0\RCSoilSolutions.Web.sourcelink.json

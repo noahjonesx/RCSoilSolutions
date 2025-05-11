@@ -1,0 +1,383 @@
+@page "/contact"
+@inject IJSRuntime JSRuntime
+
+<PageTitle>Contact Us - RC Soil Solutions</PageTitle>
+
+<!-- Page Header -->
+<section class="page-header bg-primary text-white">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6" data-aos="fade-right">
+                <h1>Contact Us</h1>
+                <p class="lead">Get in touch with our team of soil experts</p>
+            </div>
+            <div class="col-md-6 text-md-end" data-aos="fade-left">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb justify-content-md-end">
+                        <li class="breadcrumb-item"><a href="" class="text-white">Home</a></li>
+                        <li class="breadcrumb-item active text-white" aria-current="page">Contact</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Info Section -->
+<section class="section bg-white">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 mb-4 mb-lg-0">
+                <div class="card h-100 border-0 shadow text-center p-4" data-aos="fade-up">
+                    <div class="contact-icon mb-3">
+                        <i class="fas fa-map-marker-alt fa-3x text-primary"></i>
+                    </div>
+                    <h4>Our Location</h4>
+                    <p>123 Soil Avenue<br>Earthtown, ET 12345<br>United States</p>
+                    <a href="https://maps.google.com" target="_blank" class="btn btn-outline mt-auto">Get Directions</a>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 mb-4 mb-lg-0">
+                <div class="card h-100 border-0 shadow text-center p-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="contact-icon mb-3">
+                        <i class="fas fa-phone fa-3x text-primary"></i>
+                    </div>
+                    <h4>Phone Contact</h4>
+                    <p>Main Office: (123) 456-7890<br>Customer Support: (123) 456-7891<br>Fax: (123) 456-7892</p>
+                    <a href="tel:+11234567890" class="btn btn-outline mt-auto">Call Now</a>
+                </div>
+            </div>
+            
+            <div class="col-lg-4">
+                <div class="card h-100 border-0 shadow text-center p-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="contact-icon mb-3">
+                        <i class="fas fa-envelope fa-3x text-primary"></i>
+                    </div>
+                    <h4>Email Contact</h4>
+                    <p>General Inquiries: info@rcsoilsolutions.com<br>Support: support@rcsoilsolutions.com<br>Careers: careers@rcsoilsolutions.com</p>
+                    <a href="mailto:info@rcsoilsolutions.com" class="btn btn-outline mt-auto">Email Us</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Form & Map Section -->
+<section class="section bg-light">
+    <div class="container">
+        <div class="section-title">
+            <h2>Send Us a Message</h2>
+        </div>
+        <p class="section-subtitle">Have questions about our services? Need a soil consultation? We're here to help!</p>
+        
+        <div class="row mt-5">
+            <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
+                <div class="card border-0 shadow">
+                    <div class="card-body p-4">
+                        <h4 class="mb-4">Contact Form</h4>
+                        <EditForm Model="@contactForm" OnValidSubmit="HandleValidSubmit">
+                            <DataAnnotationsValidator />
+                            
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Full Name</label>
+                                <InputText id="name" class="form-control" @bind-Value="contactForm.Name" placeholder="Enter your full name" />
+                                <ValidationMessage For="@(() => contactForm.Name)" class="text-danger" />
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email Address</label>
+                                <InputText id="email" class="form-control" @bind-Value="contactForm.Email" placeholder="Enter your email address" />
+                                <ValidationMessage For="@(() => contactForm.Email)" class="text-danger" />
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="phone" class="form-label">Phone Number</label>
+                                <InputText id="phone" class="form-control" @bind-Value="contactForm.Phone" placeholder="Enter your phone number (optional)" />
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="subject" class="form-label">Subject</label>
+                                <InputSelect id="subject" class="form-select" @bind-Value="contactForm.Subject">
+                                    <option value="">-- Select Subject --</option>
+                                    <option value="General Inquiry">General Inquiry</option>
+                                    <option value="Soil Testing">Soil Testing</option>
+                                    <option value="Soil Remediation">Soil Remediation</option>
+                                    <option value="Land Management">Land Management</option>
+                                    <option value="Erosion Control">Erosion Control</option>
+                                    <option value="Consulting Services">Consulting Services</option>
+                                    <option value="Custom Soil Mixes">Custom Soil Mixes</option>
+                                    <option value="Other">Other</option>
+                                </InputSelect>
+                                <ValidationMessage For="@(() => contactForm.Subject)" class="text-danger" />
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Message</label>
+                                <InputTextArea id="message" class="form-control" @bind-Value="contactForm.Message" placeholder="Enter your message" rows="5" />
+                                <ValidationMessage For="@(() => contactForm.Message)" class="text-danger" />
+                            </div>
+                            
+                            <div class="form-check mb-3">
+                                <InputCheckbox id="terms" class="form-check-input" @bind-Value="contactForm.AcceptTerms" />
+                                <label class="form-check-label" for="terms">
+                                    I agree to the <a href="#">terms and conditions</a> and <a href="#">privacy policy</a>
+                                </label>
+                                <ValidationMessage For="@(() => contactForm.AcceptTerms)" class="text-danger d-block" />
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary" disabled="@isSending">
+                                @if (isSending)
+                                {
+                                    <span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+                                    <span>Sending...</span>
+                                }
+                                else
+                                {
+                                    <span>Send Message</span>
+                                }
+                            </button>
+                            
+                            @if (showSuccessMessage)
+                            {
+                                <div class="alert alert-success mt-3">
+                                    <i class="fas fa-check-circle me-2"></i> 
+                                    Thank you for your message! We'll get back to you as soon as possible.
+                                </div>
+                            }
+                            
+                            @if (showErrorMessage)
+                            {
+                                <div class="alert alert-danger mt-3">
+                                    <i class="fas fa-exclamation-circle me-2"></i> 
+                                    There was an error sending your message. Please try again later.
+                                </div>
+                            }
+                        </EditForm>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-6" data-aos="fade-left">
+                <div class="card border-0 shadow h-100">
+                    <div class="card-body p-4">
+                        <h4 class="mb-4">Our Location</h4>
+                        <div class="map-container rounded" style="height: 400px; background-color: #e9e9e9;">
+                            <!-- In a real application, this would be replaced with an actual map component -->
+                            <div class="text-center p-5">
+                                <i class="fas fa-map-marked-alt fa-5x text-primary mb-3"></i>
+                                <h5>Interactive Map</h5>
+                                <p class="text-muted">A Google Maps or similar map would be integrated here in the final application.</p>
+                                <button type="button" class="btn btn-outline mt-3" @onclick="InitializeMap">Load Map</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Business Hours Section -->
+<section class="section bg-white">
+    <div class="container">
+        <div class="section-title">
+            <h2>Business Hours</h2>
+        </div>
+        <p class="section-subtitle">When you can reach us or visit our office</p>
+        
+        <div class="row mt-5 justify-content-center">
+            <div class="col-lg-8">
+                <div class="card border-0 shadow" data-aos="fade-up">
+                    <div class="card-body p-0">
+                        <div class="table-responsive">
+                            <table class="table table-hover mb-0">
+                                <thead class="bg-primary text-white">
+                                    <tr>
+                                        <th class="py-3 px-4">Day</th>
+                                        <th class="py-3 px-4">Office Hours</th>
+                                        <th class="py-3 px-4">Field Services</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="py-3 px-4"><strong>Monday</strong></td>
+                                        <td class="py-3 px-4">8:00 AM - 5:00 PM</td>
+                                        <td class="py-3 px-4">7:00 AM - 6:00 PM</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-3 px-4"><strong>Tuesday</strong></td>
+                                        <td class="py-3 px-4">8:00 AM - 5:00 PM</td>
+                                        <td class="py-3 px-4">7:00 AM - 6:00 PM</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-3 px-4"><strong>Wednesday</strong></td>
+                                        <td class="py-3 px-4">8:00 AM - 5:00 PM</td>
+                                        <td class="py-3 px-4">7:00 AM - 6:00 PM</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-3 px-4"><strong>Thursday</strong></td>
+                                        <td class="py-3 px-4">8:00 AM - 5:00 PM</td>
+                                        <td class="py-3 px-4">7:00 AM - 6:00 PM</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-3 px-4"><strong>Friday</strong></td>
+                                        <td class="py-3 px-4">8:00 AM - 5:00 PM</td>
+                                        <td class="py-3 px-4">7:00 AM - 6:00 PM</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-3 px-4"><strong>Saturday</strong></td>
+                                        <td class="py-3 px-4">9:00 AM - 1:00 PM</td>
+                                        <td class="py-3 px-4">By Appointment</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-3 px-4"><strong>Sunday</strong></td>
+                                        <td class="py-3 px-4">Closed</td>
+                                        <td class="py-3 px-4">Closed</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="section bg-light">
+    <div class="container">
+        <div class="section-title">
+            <h2>Frequently Asked Questions</h2>
+        </div>
+        <p class="section-subtitle">Quick answers to common questions about our services</p>
+        
+        <div class="row mt-5">
+            <div class="col-lg-6 mb-4" data-aos="fade-up">
+                <div class="card border-0 shadow h-100">
+                    <div class="card-body p-4">
+                        <h5 class="mb-3"><i class="fas fa-question-circle text-primary me-2"></i> How long does a soil test take?</h5>
+                        <p>Standard soil tests are typically completed within 3-5 business days after we receive your sample. Comprehensive tests may take 7-10 business days. Expedited testing is available for an additional fee.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="card border-0 shadow h-100">
+                    <div class="card-body p-4">
+                        <h5 class="mb-3"><i class="fas fa-question-circle text-primary me-2"></i> Do you serve residential properties?</h5>
+                        <p>Absolutely! We work with properties of all sizes, from small residential gardens to large agricultural operations. Our services are scalable to meet the needs of any project, regardless of size.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="card border-0 shadow h-100">
+                    <div class="card-body p-4">
+                        <h5 class="mb-3"><i class="fas fa-question-circle text-primary me-2"></i> What geographic areas do you serve?</h5>
+                        <p>We primarily serve clients within a 150-mile radius of our office in Earthtown. For larger projects or specialized services, we can arrange service throughout the country. Contact us for details about your specific location.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="card border-0 shadow h-100">
+                    <div class="card-body p-4">
+                        <h5 class="mb-3"><i class="fas fa-question-circle text-primary me-2"></i> How much does soil remediation cost?</h5>
+                        <p>Soil remediation costs vary widely depending on the size of the area, type and severity of contamination, and the remediation method required. We provide detailed quotes after conducting an initial assessment of your soil.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-4" data-aos="fade-up">
+            <a href="#" class="btn btn-primary">View All FAQs</a>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta">
+    <div class="container">
+        <h2 class="cta-title" data-aos="fade-up">Ready to Get Started?</h2>
+        <p class="cta-text" data-aos="fade-up" data-aos-delay="100">
+            Contact us today for a free consultation and soil assessment. Our experts are ready to help you achieve optimal soil health and productivity.
+        </p>
+        <div class="cta-buttons" data-aos="fade-up" data-aos-delay="200">
+            <a href="tel:+11234567890" class="btn btn-accent btn-lg">Call (123) 456-7890</a>
+            <a href="mailto:info@rcsoilsolutions.com" class="btn btn-outline btn-lg">Email Us</a>
+        </div>
+    </div>
+</section>
+
+@code {
+    private ContactFormModel contactForm = new ContactFormModel();
+    private bool isSending = false;
+    private bool showSuccessMessage = false;
+    private bool showErrorMessage = false;
+    
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await JSRuntime.InvokeVoidAsync("AOS.init");
+        }
+    }
+    
+    private async Task HandleValidSubmit()
+    {
+        isSending = true;
+        showSuccessMessage = false;
+        showErrorMessage = false;
+        
+        // Simulate API call delay
+        await Task.Delay(1500);
+        
+        try
+        {
+            // In a real application, this would call an API to submit the form
+            // For demo purposes, we'll just simulate success
+            showSuccessMessage = true;
+            contactForm = new ContactFormModel();
+        }
+        catch
+        {
+            showErrorMessage = true;
+        }
+        finally
+        {
+            isSending = false;
+            StateHasChanged();
+        }
+    }
+    
+    private async Task InitializeMap()
+    {
+        await JSRuntime.InvokeVoidAsync("initializeMap");
+    }
+    
+    public class ContactFormModel
+    {
+        [Required(ErrorMessage = "Name is required")]
+        [StringLength(100, ErrorMessage = "Name cannot exceed 100 characters")]
+        public string Name { get; set; } = "";
+        
+        [Required(ErrorMessage = "Email is required")]
+        [EmailAddress(ErrorMessage = "Please enter a valid email address")]
+        public string Email { get; set; } = "";
+        
+        public string Phone { get; set; } = "";
+        
+        [Required(ErrorMessage = "Please select a subject")]
+        public string Subject { get; set; } = "";
+        
+        [Required(ErrorMessage = "Message is required")]
+        [StringLength(1000, MinimumLength = 10, ErrorMessage = "Message must be between 10 and 1000 characters")]
+        public string Message { get; set; } = "";
+        
+        [Required(ErrorMessage = "You must accept the terms and conditions")]
+        [Range(typeof(bool), "true", "true", ErrorMessage = "You must accept the terms and conditions")]
+        public bool AcceptTerms { get; set; }
+    }
+} 
