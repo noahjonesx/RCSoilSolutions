@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RCSoilSolutions.Web")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+52e8ae1c246c0f2fb977bd14353a2fe9215090bd")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5b1b7eb6ede81a9ec92bb6b9bbd84c3f712ca6b2")]
 [assembly: System.Reflection.AssemblyProductAttribute("RCSoilSolutions.Web")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RCSoilSolutions.Web")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
